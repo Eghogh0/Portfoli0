@@ -7,7 +7,7 @@
 |---|---|
 | **Name** | Eghogho Esele |
 | **Matric No.** | 24120111119 |
-| **Live URL** | `[https://your-portfolio.vercel.app]` ← *replace after deploying* |
+| **Live URL** | [https://portfoli0-eosin.vercel.app] ← *replace after deploying* |
 | **GitHub** | [https://github.com/Eghogh0/Time-Table] ← *replace after pushing* |
 
 ---
@@ -50,15 +50,6 @@ portfolio/
 - **Motion:** one expo-out easing curve, restrained scroll-reveal and hover
   micro-interactions, full `prefers-reduced-motion` support.
 
-## Before you deploy — do these three things
-
-1. **Add your real links** in the `CONFIG` object at the top of [`js/main.js`](js/main.js)
-   (email, WhatsApp, GitHub, LinkedIn, X, and the live URLs for Greedy Pig and the
-   Timetable Planner). Anything left `null` renders as a faded "coming soon" link
-   instead of a broken one.
-2. **Replace the matric number and URLs** in this README.
-3. **Verify the two education entries** in `index.html` (04 · Background) match your
-   actual dates, and adjust the experience timeline to your real history.
 
 Honesty note, by design: all app visuals on this site are **original conceptual
 mockups built in CSS/SVG**, not screenshots — this is stated on the pages themselves.
