@@ -1,0 +1,466 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Walka — Case Study · Eghogho Esele</title>
+  <meta name="description" content="Walka: a walking-first fitness concept. Problem, approach, screen-level features, data language and a build plan — designed and prototyped in code by Eghogho Esele.">
+  <meta name="author" content="Eghogho Esele">
+  <meta name="theme-color" content="#F3F0E8">
+  <meta property="og:title" content="Walka — a case study by Eghogho Esele">
+  <meta property="og:description" content="Walking, reimagined as a game you keep winning.">
+  <meta property="og:type" content="article">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23171717'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='36' fill='%23F3F0E8' text-anchor='middle'%3EW%3C/text%3E%3Ccircle cx='47' cy='41' r='4' fill='%23A63D32'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://api.fontshare.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://api.fontshare.com/v2/css?f[]=general-sans,100..900" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=Instrument+Serif&amp;family=Manrope:wght@400..700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ═══════════ NAVIGATION ═══════════ -->
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a class="logo" href="index.html" aria-label="Esele — home">
+        <span class="logo__mark">Esele<span class="dot">.</span></span>
+        <span class="logo__sub">Case study · 01</span>
+      </a>
+      <nav class="nav__links" aria-label="Primary">
+        <a class="nav__link" href="index.html#work"><span class="n">←</span>All work</a>
+        <a class="nav__link" href="index.html"><span class="n">00</span>Home</a>
+      </nav>
+      <div class="nav__cta">
+        <a class="btn btn--sm" href="index.html#contact">Get in touch <span class="btn__arrow">→</span></a>
+      </div>
+      <button class="nav__burger" aria-expanded="false" aria-controls="menu" aria-label="Open menu">
+        <span></span><span></span>
+      </button>
+    </div>
+    <div class="nav__overlay" id="menu">
+      <ol class="nav__menu">
+        <li><a href="index.html"><span class="n">00</span>Home</a></li>
+        <li><a href="index.html#work"><span class="n">01</span>All work</a></li>
+        <li><a href="index.html#about"><span class="n">02</span>About</a></li>
+        <li><a href="index.html#contact"><span class="n">03</span>Contact</a></li>
+      </ol>
+      <div class="nav__foot">
+        <span data-live="email">hello@yourname.dev</span>
+        <span>Walka — case study 01</span>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ═══════════ CASE-STUDY HERO ═══════════ -->
+    <section class="section cs-hero" aria-labelledby="cs-title">
+      <div class="container">
+        <a class="crumb" href="index.html#work">← All projects</a>
+        <div class="cs-hero__head reveal">
+          <p class="eyebrow eyebrow--plain">Case study — 01 · Walka</p>
+          <h1 id="cs-title">Walka<span class="accent">.</span></h1>
+          <p class="cs-hero__sub">walking, reimagined as a game you keep winning</p>
+          <p class="cs-hero__lede">Walka is a walking-first fitness concept. This page is the full treatment: the problem, the design rules that answer it, four screen-level features, the visual language, and how it would be built. Every mockup below is original UI, prototyped in code — not screenshots.</p>
+        </div>
+        <dl class="cs-facts reveal" data-delay="1">
+          <div><dt>Role</dt><dd>Designer &amp; developer</dd></div>
+          <div><dt>Platforms</dt><dd>iOS · Android (concept)</dd></div>
+          <div><dt>Phase</dt><dd>v0.9 — concept</dd></div>
+          <div><dt>Year</dt><dd>2026</dd></div>
+          <div><dt>Stack</dt><dd>React Native · TypeScript · SVG</dd></div>
+        </dl>
+        <div class="cs-hero__media reveal" data-delay="2">
+          <div class="mocks" aria-hidden="true">
+            <div class="device device--tilt-l"><div class="device__screen ui">
+              <p class="ui__bar"><span>9:41</span><span>●●●</span></p>
+              <div class="ui__hero"><p class="big">6,840</p><p class="cap">steps today · 78% of goal</p></div>
+              <div class="ui__row">
+                <div class="ui__tile"><b>4.2 km</b><small>distance</small></div>
+                <div class="ui__tile"><b>38 min</b><small>moving</small></div>
+              </div>
+              <div class="ui__row">
+                <div class="ui__ring"><span>78%</span></div>
+                <div class="ui__row-copy"><b>7-day streak</b><small>best: 14 days</small></div>
+              </div>
+              <div class="ui__tabs"><span class="on">◉&nbsp;Home</span><span>Route</span><span>Stats</span><span>Social</span></div>
+            </div></div>
+            <div class="device device--tilt-r"><div class="device__screen ui">
+              <p class="ui__bar"><span>9:41</span><span>●●●</span></p>
+              <div class="ui__map" aria-hidden="true">
+                <svg viewBox="0 0 200 240" preserveAspectRatio="xMidYMid slice">
+                  <rect width="200" height="240" fill="#E4DFD0"/>
+                  <g stroke="#171717" stroke-opacity=".06">
+                    <path d="M0 40h200M0 80h200M0 120h200M0 160h200M0 200h200"/>
+                    <path d="M40 0v240M80 0v240M120 0v240M160 0v240"/>
+                  </g>
+                  <rect x="132" y="30" width="52" height="52" rx="6" fill="#D8D4CA" opacity=".85"/>
+                  <path d="M30 210C60 190 40 150 78 138S120 100 108 70" fill="none" stroke="#A63D32" stroke-width="3.5" stroke-linecap="round"/>
+                  <circle cx="30" cy="210" r="4" fill="#F3F0E8" stroke="#171717" stroke-width="2"/>
+                  <circle cx="108" cy="70" r="5" fill="#A63D32" stroke="#F3F0E8" stroke-width="2"/>
+                </svg>
+              </div>
+              <div class="ui__sheet">
+                <div class="ui__sheet-top"><span class="ui__meta">live · 12 km route</span><span class="ui__stop"></span></div>
+                <p class="t">42:18</p>
+                <div class="ui__stats">
+                  <div><b>6′42″</b><small>pace / km</small></div>
+                  <div><b>4.2</b><small>km</small></div>
+                  <div><b>128</b><small>bpm</small></div>
+                </div>
+              </div>
+            </div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ 01 · PROBLEM ═══════════ -->
+    <section class="section section--tight">
+      <div class="container">
+        <div class="split reveal">
+          <div class="split__label">
+            <p class="eyebrow">01 · The problem</p>
+            <h3>Fitness apps count you. <span class="serif">They don’t move with you.</span></h3>
+          </div>
+          <div class="split__body">
+            <p>Most step apps open on a dashboard you have to go find them. The walk already happened; the app just tallies it afterwards. Motivation dies in that gap — I walked, I saw a number, I closed the app.</p>
+            <p>Walka inverts the loop. The walk is the hero: live pace, route and body feedback sit front-of-house, and the score arrives as reward rather than report. Goals adapt to the week so a quiet Tuesday doesn’t break a streak, and the social layer nudges — one friend’s route, one shared challenge — instead of performing in a feed.</p>
+            <p>The constraint that shaped everything: <strong>if the phone is in the pocket, the app still has to feel like it’s moving.</strong></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ 02 · APPROACH ═══════════ -->
+    <section class="section section--tight">
+      <div class="container">
+        <div class="split reveal">
+          <div class="split__label">
+            <p class="eyebrow">02 · Approach</p>
+            <h3>Three rules, <span class="serif">not a feature list.</span></h3>
+          </div>
+          <div class="split__body">
+            <ul class="points">
+              <li><span><strong>The walk is the hero.</strong> Every screen assumes you’re mid-route, not browsing — glanceable at 40&nbsp;km/h? No: glanceable at a phone-check, five seconds, one thumb.</span></li>
+              <li><span><strong>Progress you can feel.</strong> Goals, streaks and pace bands react to the last seven days, not a fixed target the app picked for you.</span></li>
+              <li><span><strong>A community that nudges, not a feed that scrolls.</strong> One friend’s route, one shared weekly challenge, and that’s the whole social surface.</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ 03 · FEATURES ═══════════ -->
+    <section class="section section--tight" aria-label="Features">
+      <div class="container">
+        <div class="head reveal">
+          <div>
+            <p class="eyebrow">03 · Features</p>
+            <h2>Four surfaces, <span class="serif">one rhythm.</span></h2>
+          </div>
+          <p class="head__note">Sticky mockups — the screens stay with the words. All visuals are conceptual UI.</p>
+        </div>
+
+        <!-- F1 — Live tracking -->
+        <div class="feature reveal">
+          <div class="feature__media">
+            <div class="stage">
+              <div class="device" aria-hidden="true"><div class="device__screen ui">
+                <p class="ui__bar"><span>9:41</span><span>●●●</span></p>
+                <div class="ui__map" aria-hidden="true">
+                  <svg viewBox="0 0 200 240" preserveAspectRatio="xMidYMid slice">
+                    <rect width="200" height="240" fill="#E4DFD0"/>
+                    <g stroke="#171717" stroke-opacity=".06">
+                      <path d="M0 40h200M0 80h200M0 120h200M0 160h200M0 200h200"/>
+                      <path d="M40 0v240M80 0v240M120 0v240M160 0v240"/>
+                    </g>
+                    <rect x="132" y="30" width="52" height="52" rx="6" fill="#D8D4CA" opacity=".85"/>
+                    <path d="M30 210C60 190 40 150 78 138S120 100 108 70" fill="none" stroke="#A63D32" stroke-width="3.5" stroke-linecap="round"/>
+                    <circle cx="30" cy="210" r="4" fill="#F3F0E8" stroke="#171717" stroke-width="2"/>
+                    <circle cx="108" cy="70" r="5" fill="#A63D32" stroke="#F3F0E8" stroke-width="2"/>
+                  </svg>
+                </div>
+                <div class="ui__sheet">
+                  <div class="ui__sheet-top"><span class="ui__meta">live · 12 km route</span><span class="ui__stop"></span></div>
+                  <p class="t">42:18</p>
+                  <div class="ui__stats">
+                    <div><b>6′42″</b><small>pace / km</small></div>
+                    <div><b>4.2</b><small>km</small></div>
+                    <div><b>128</b><small>bpm</small></div>
+                  </div>
+                </div>
+                <div class="ui__tabs"><span>Home</span><span class="on">◉&nbsp;Route</span><span>Stats</span><span>Social</span></div>
+              </div></div>
+            </div>
+          </div>
+          <div class="feature__copy">
+            <p class="idx">F — 01</p>
+            <h3>The walk itself</h3>
+            <p>The live screen is the only screen that matters mid-walk. A route line that grows as you go, a big timer you can read with your thumb, and a bottom sheet with exactly three numbers. Nothing else competes for attention.</p>
+            <ul class="points">
+              <li><span>Pace, distance and heart rate — three numbers, no graphs mid-route.</span></li>
+              <li><span>The stop control is one thumb-reach away, at 64&nbsp;px on a real phone.</span></li>
+              <li><span>The route line redraws in the accent brick — the app’s one warm note on a cool map.</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- F2 — Adaptive goals -->
+        <div class="feature feature--reverse reveal">
+          <div class="feature__media">
+            <div class="stage">
+              <div class="device" aria-hidden="true"><div class="device__screen ui">
+                <p class="ui__bar"><span>9:41</span><span>●●●</span></p>
+                <div class="ui__hero"><p class="big">6,840</p><p class="cap">steps today · 78% of goal</p></div>
+                <div class="ui__row">
+                  <div class="ui__tile"><b>4.2 km</b><small>distance</small></div>
+                  <div class="ui__tile"><b>38 min</b><small>moving</small></div>
+                </div>
+                <div class="ui__row">
+                  <div class="ui__ring"><span>78%</span></div>
+                  <div class="ui__row-copy"><b>7-day streak</b><small>best: 14 days</small></div>
+                </div>
+                <div class="ui__tabs"><span class="on">◉&nbsp;Home</span><span>Route</span><span>Stats</span><span>Social</span></div>
+              </div></div>
+            </div>
+          </div>
+          <div class="feature__copy">
+            <p class="idx">F — 02</p>
+            <h3>A goal that breathes</h3>
+            <p>The daily target is a moving average of your last seven days, nudged by the season and by the weather. Slow week, slower goal; a big Saturday walks the target back up. The ring on the home screen is always close — close enough to chase, never set to fail.</p>
+            <ul class="points">
+              <li><span>Goal range: 60–120% of your seven-day average, capped by rest days.</span></li>
+              <li><span>Streaks count “kept the pace”, not “maxed the bar” — so they survive busy weeks.</span></li>
+              <li><span>The ring uses a 78% arc, never 100% in the mock: full circles are earned, never faked.</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- F3 — Insights -->
+        <div class="feature reveal">
+          <div class="feature__media">
+            <div class="stage">
+              <div class="device" aria-hidden="true"><div class="device__screen ui">
+                <p class="ui__bar"><span>9:41</span><span>●●●</span></p>
+                <div class="ui__hero"><p class="big">128.4</p><p class="cap">km this month · +12%</p></div>
+                <div class="ui__chips" aria-hidden="true"><span class="on">7d</span><span>30d</span><span>1y</span></div>
+                <div class="ui__chart" aria-hidden="true">
+                  <i style="height:38%"></i><i style="height:64%"></i><i style="height:24%"></i><i style="height:82%"></i><i style="height:52%"></i><i style="height:96%"></i><i class="now" style="height:70%"></i>
+                </div>
+                <div class="ui__row">
+                  <div class="ui__tile"><b>12.3 km</b><small>longest walk</small></div>
+                  <div class="ui__tile"><b>5′58″</b><small>best pace</small></div>
+                </div>
+                <div class="ui__tabs"><span>Home</span><span>Route</span><span class="on">◉&nbsp;Stats</span><span>Social</span></div>
+              </div></div>
+            </div>
+          </div>
+          <div class="feature__copy">
+            <p class="idx">F — 03</p>
+            <h3>Weeks, not dashboards</h3>
+            <p>Insights answer the questions people actually ask — “am I doing more than last month?” — instead of showing a wall of graphs. One big number, one seven-day bar strip, two personal records. That’s the whole page.</p>
+            <ul class="points">
+              <li><span>The bars are honest: short walks stay short bars. No axis truncation, no cherry-picking.</span></li>
+              <li><span>Records only update when broken — the UI celebrates, it doesn’t re-tell history.</span></li>
+              <li><span>Zero-step days render a designed empty state, not a blank one.</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- F4 — Social -->
+        <div class="feature feature--reverse reveal">
+          <div class="feature__media">
+            <div class="stage">
+              <div class="device" aria-hidden="true"><div class="device__screen ui">
+                <p class="ui__bar"><span>9:41</span><span>●●●</span></p>
+                <div class="ui__hero"><p class="big">40 km</p><p class="cap">week challenge · 28 km done</p></div>
+                <div class="ui__prog" aria-hidden="true"><div class="lbl"><b>70%</b><span>you’re ahead of last week</span></div><div class="ui__line"></div></div>
+                <div class="ui__chips" aria-hidden="true"><span class="on">Challenge</span><span>Friends</span></div>
+                <ul class="ui__lb" aria-hidden="true">
+                  <li><span class="r">01</span><span class="ini">AM</span><span class="nm">Amara</span><span class="km">31.2 km</span></li>
+                  <li><span class="r">02</span><span class="ini">KE</span><span class="nm">Kelechi</span><span class="km">29.8 km</span></li>
+                  <li class="you"><span class="r">03</span><span class="ini">EE</span><span class="nm">You</span><span class="km">28.4 km</span></li>
+                  <li><span class="r">04</span><span class="ini">ZO</span><span class="nm">Zainab</span><span class="km">26.1 km</span></li>
+                </ul>
+                <div class="ui__tabs"><span>Home</span><span>Route</span><span>Stats</span><span class="on">◉&nbsp;Social</span></div>
+              </div></div>
+            </div>
+          </div>
+          <div class="feature__copy">
+            <p class="idx">F — 04</p>
+            <h3>Wins you share, not a feed you scroll</h3>
+            <p>Social is one challenge and one leaderboard, reset weekly. The point isn’t to keep looking — it’s to have a reason to stop. The leaderboard is deliberately tiny: five people, one column, no comments.</p>
+            <ul class="points">
+              <li><span>Challenges are capped in scope — 40&nbsp;km a week, not a marathon promise.</span></li>
+              <li><span>“You” is the highlight row, not the top row: the app never ranks your life.</span></li>
+              <li><span>No infinite scroll exists anywhere in Walka. Full stop.</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ 04 · SCREEN GALLERY ═══════════ -->
+    <section class="section section--tight" aria-label="Screen gallery">
+      <div class="container">
+        <div class="head reveal">
+          <div>
+            <p class="eyebrow">04 · The interface, in full</p>
+            <h2>Four screens, <span class="serif">one language.</span></h2>
+          </div>
+          <p class="head__note">All mockups are original conceptual UI, prototyped in code — none are screenshots.</p>
+        </div>
+        <div class="gallery reveal">
+          <figure aria-hidden="true">
+            <div class="device"><div class="device__screen ui">
+              <p class="ui__bar"><span>9:41</span><span>●●●</span></p>
+              <div class="ui__hero"><p class="big">6,840</p><p class="cap">steps today · 78% of goal</p></div>
+              <div class="ui__row"><div class="ui__tile"><b>4.2 km</b><small>distance</small></div><div class="ui__tile"><b>38 min</b><small>moving</small></div></div>
+              <div class="ui__row"><div class="ui__ring"><span>78%</span></div><div class="ui__row-copy"><b>7-day streak</b><small>best: 14 days</small></div></div>
+              <div class="ui__tabs"><span class="on">◉&nbsp;Home</span><span>Route</span><span>Stats</span><span>Social</span></div>
+            </div></div>
+            <figcaption>01 — Today</figcaption>
+          </figure>
+          <figure aria-hidden="true">
+            <div class="device"><div class="device__screen ui">
+              <p class="ui__bar"><span>9:41</span><span>●●●</span></p>
+              <div class="ui__map" aria-hidden="true">
+                <svg viewBox="0 0 200 240" preserveAspectRatio="xMidYMid slice">
+                  <rect width="200" height="240" fill="#E4DFD0"/>
+                  <g stroke="#171717" stroke-opacity=".06">
+                    <path d="M0 40h200M0 80h200M0 120h200M0 160h200M0 200h200"/>
+                    <path d="M40 0v240M80 0v240M120 0v240M160 0v240"/>
+                  </g>
+                  <rect x="132" y="30" width="52" height="52" rx="6" fill="#D8D4CA" opacity=".85"/>
+                  <path d="M30 210C60 190 40 150 78 138S120 100 108 70" fill="none" stroke="#A63D32" stroke-width="3.5" stroke-linecap="round"/>
+                  <circle cx="30" cy="210" r="4" fill="#F3F0E8" stroke="#171717" stroke-width="2"/>
+                  <circle cx="108" cy="70" r="5" fill="#A63D32" stroke="#F3F0E8" stroke-width="2"/>
+                </svg>
+              </div>
+              <div class="ui__sheet">
+                <div class="ui__sheet-top"><span class="ui__meta">live · 12 km route</span><span class="ui__stop"></span></div>
+                <p class="t">42:18</p>
+                <div class="ui__stats">
+                  <div><b>6′42″</b><small>pace / km</small></div><div><b>4.2</b><small>km</small></div><div><b>128</b><small>bpm</small></div>
+                </div>
+              </div>
+              <div class="ui__tabs"><span>Home</span><span class="on">◉&nbsp;Route</span><span>Stats</span><span>Social</span></div>
+            </div></div>
+            <figcaption>02 — Live walk</figcaption>
+          </figure>
+          <figure aria-hidden="true">
+            <div class="device"><div class="device__screen ui">
+              <p class="ui__bar"><span>9:41</span><span>●●●</span></p>
+              <div class="ui__hero"><p class="big">128.4</p><p class="cap">km this month · +12%</p></div>
+              <div class="ui__chips" aria-hidden="true"><span class="on">7d</span><span>30d</span><span>1y</span></div>
+              <div class="ui__chart" aria-hidden="true">
+                <i style="height:38%"></i><i style="height:64%"></i><i style="height:24%"></i><i style="height:82%"></i><i style="height:52%"></i><i style="height:96%"></i><i class="now" style="height:70%"></i>
+              </div>
+              <div class="ui__row"><div class="ui__tile"><b>12.3 km</b><small>longest walk</small></div><div class="ui__tile"><b>5′58″</b><small>best pace</small></div></div>
+              <div class="ui__tabs"><span>Home</span><span>Route</span><span class="on">◉&nbsp;Stats</span><span>Social</span></div>
+            </div></div>
+            <figcaption>03 — Insights</figcaption>
+          </figure>
+          <figure aria-hidden="true">
+            <div class="device"><div class="device__screen ui">
+              <p class="ui__bar"><span>9:41</span><span>●●●</span></p>
+              <div class="ui__hero"><p class="big">40 km</p><p class="cap">week challenge · 28 km done</p></div>
+              <div class="ui__prog" aria-hidden="true"><div class="lbl"><b>70%</b><span>you’re ahead of last week</span></div><div class="ui__line"></div></div>
+              <ul class="ui__lb" aria-hidden="true">
+                <li><span class="r">01</span><span class="ini">AM</span><span class="nm">Amara</span><span class="km">31.2 km</span></li>
+                <li class="you"><span class="r">02</span><span class="ini">EE</span><span class="nm">You</span><span class="km">29.4 km</span></li>
+                <li><span class="r">03</span><span class="ini">KE</span><span class="nm">Kelechi</span><span class="km">28.9 km</span></li>
+                <li><span class="r">04</span><span class="ini">ZO</span><span class="nm">Zainab</span><span class="km">26.1 km</span></li>
+              </ul>
+              <div class="ui__tabs"><span>Home</span><span>Route</span><span>Stats</span><span class="on">◉&nbsp;Social</span></div>
+            </div></div>
+            <figcaption>04 — Challenges</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ 05 · TECHNOLOGY ═══════════ -->
+    <section class="section section--tight">
+      <div class="container">
+        <div class="split reveal">
+          <div class="split__label">
+            <p class="eyebrow">05 · Technology</p>
+            <h3>How it’s built, <span class="serif">and how it would be.</span></h3>
+          </div>
+          <div class="split__body">
+            <p><strong>Architecture.</strong> React Native + TypeScript around one central reducer: the <em>walk session</em>. Everything — live numbers, route, state changes — flows through it, so the UI can never show a number the session doesn’t know.</p>
+            <p><strong>Data.</strong> Daily aggregates, not raw point clouds: steps, distance and a simplified geo-polyline per walk, kept on-device first and synced to an edge Postgres (Supabase) when it matters. Privacy by default, storage kept honest.</p>
+            <p><strong>Visual language.</strong> The same four tokens that run this whole site — ivory, ink, brick, stone — plus IBM Plex Mono for numerals and Instrument Serif for the lines that are allowed to feel human. One brick-red accent across every screen, so the product reads as one object.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ 06 · WHAT I LEARNED ═══════════ -->
+    <section class="section section--tight">
+      <div class="container">
+        <div class="stats reveal" aria-label="By the numbers">
+          <div class="stat"><b>12<span class="accent">+</span></b><span>App screens prototyped</span></div>
+          <div class="stat"><b>4</b><span>Core flows, one rhythm</span></div>
+          <div class="stat"><b>1</b><span>Shared design language</span></div>
+          <div class="stat"><b>0</b><span>Frameworks in the mockups — pure CSS</span></div>
+        </div>
+        <div class="split reveal" data-delay="1" style="margin-top:var(--sp-9)">
+          <div class="split__label">
+            <p class="eyebrow">06 · What I learned</p>
+            <h3>Lessons that <span class="serif">stuck.</span></h3>
+          </div>
+          <div class="split__body">
+            <ul class="points">
+              <li><span><strong>Prototyping in code beats artboards.</strong> These mockups render in a browser, so the edge cases — small screens, long numbers, empty states — are already solved.</span></li>
+              <li><span><strong>Data honesty.</strong> A fitness app that celebrates zero steps is dead in a week. Every screen here has an empty state designed as carefully as a full one.</span></li>
+              <li><span><strong>Tokens are a contract.</strong> The same four tokens run this site and every Walka screen — that’s why they agree with each other.</span></li>
+              <li><span><strong>Constraints create identity.</strong> No feeds, no infinite scroll, no streak-shaming. What you refuse to build defines the product more than what you build.</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ NEXT / PREVIOUS NAV ═══════════ -->
+    <section class="section" aria-label="Project navigation">
+      <div class="container">
+        <div class="head reveal">
+          <div>
+            <p class="eyebrow">Keep going</p>
+            <h2>Next up <span class="serif">the queue.</span></h2>
+          </div>
+        </div>
+        <nav class="cs-nav reveal" aria-label="Project navigation">
+          <a class="cs-nav__link" href="index.html#work">
+            <p class="tag">← Previous</p>
+            <h3>All projects</h3>
+            <p class="card__desc">Back to the full list of work — Walka, Greedy Pig Reimagined and the Study Timetable Planner.</p>
+          </a>
+          <a class="cs-nav__link cs-nav__next" data-live="greedypig" href="#">
+            <p class="tag">Next — 02</p>
+            <h3>Greedy Pig, Reimagined</h3>
+            <p class="card__desc">A push-your-luck dice game rebuilt around a real Supabase backend, with sound and a live demo.</p>
+          </a>
+        </nav>
+      </div>
+    </section>
+  </main>
+
+  <!-- ═══════════ FOOTER ═══════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <p class="footer__brand">Esele<span class="dot">.</span></p>
+        <p>© <span data-year>2026</span> Eghogho Esele</p>
+        <p><a href="index.html">← Back to portfolio</a></p>
+        <a href="#nav">Back to top ↑</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
