@@ -27,7 +27,7 @@
 
     live: {
       greedypig: null,   // your deployed Greedy Pig Reimagined URL
-      timetable: null    // your deployed Study Timetable Planner URL
+      timetable: "https://time-table-dapw.vercel.app",    // your deployed Study Timetable Planner URL
     }
   };
 
