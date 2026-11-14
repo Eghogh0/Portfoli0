@@ -8,7 +8,7 @@
 | **Name** | Eghogho Esele |
 | **Matric No.** | 24120111119 |
 | **Live URL** | [https://portfoli0-eosin.vercel.app] |
-| **GitHub** | [https://github.com/Eghogh0/Time-Table] |
+| **GitHub** | [https://github.com/Eghogh0] |
 
 ---
 
