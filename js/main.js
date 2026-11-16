@@ -26,7 +26,7 @@
                               
 
     live: {
-      greedypig: null,   // your deployed Greedy Pig Reimagined URL
+      greedypig: "https://greed-pig-dpno1b0244v8.edgeone.dev",   // your deployed Greedy Pig Reimagined URL
       timetable: "https://time-table-dapw.vercel.app",    // your deployed Study Timetable Planner URL
     }
   };
